@@ -1,3 +1,13 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/TylorS/most-request/compare/v2.0.0...v2.1.0) (2017-02-11)
+
+
+### Features
+
+* **request:** make ResponseStream hold it's value ([0cfb9e2](https://github.com/TylorS/most-request/commit/0cfb9e2))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/TylorS/most-request/compare/v1.2.0...v2.0.0) (2017-02-11)
 

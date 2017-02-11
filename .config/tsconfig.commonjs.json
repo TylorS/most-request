@@ -8,6 +8,7 @@
     ],
     "types": [],
     "baseUrl": "../",
+    "declaration": true,
     "noImplicitAny": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,

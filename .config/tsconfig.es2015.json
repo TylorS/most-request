@@ -8,6 +8,7 @@
     ],
     "types": [],
     "baseUrl": "../",
+    "declaration": true,
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noUnusedParameters": true,

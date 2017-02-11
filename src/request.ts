@@ -1,11 +1,25 @@
-import { Disposable, Scheduler, Sink, Source, Stream, multicast } from 'most';
+import { Disposable, Scheduler, Sink, Source, Stream } from 'most';
 import { RequestOptions, Response } from './types';
 
+import { MulticastSource } from '@most/multicast';
 import { Request } from 'superagent';
 import { optionsToSuperagent } from './optionsToSuperagent';
 
-export function request(options: RequestOptions): Stream<Response> {
-  return multicast(new Stream(new RequestSource(options)));
+export function request(options: RequestOptions): ResponseStream {
+  return new ResponseStream(options);
+}
+
+export class ResponseStream extends Stream<Response> {
+  private _options: RequestOptions;
+
+  constructor (options: RequestOptions) {
+    super(new MulticastSource(new RequestSource(options)));
+    this._options = options;
+  }
+
+  public options(): RequestOptions {
+    return this._options;
+  }
 }
 
 class RequestSource implements Source<Response> {

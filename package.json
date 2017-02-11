@@ -60,6 +60,7 @@
     "validate-commit-msg": "^2.11.1"
   },
   "dependencies": {
+    "@most/multicast": "^1.2.5",
     "most": "^1.2.1",
     "superagent": "^3.4.1"
   }

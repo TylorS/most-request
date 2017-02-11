@@ -43,16 +43,11 @@ class RequestDisposable implements Disposable<any> {
 
     this.request = request;
 
-    request.on('progress', (response: Response) => this.event(response));
     request.then(response => this.eventAndEnd(response), err => this.error(err));
   }
 
   public dispose() {
     this.request.abort();
-  }
-
-  private event(response: Response) {
-    this.sink.event(this.scheduler.now(), response);
   }
 
   private eventAndEnd(response: Response) {

@@ -38,7 +38,6 @@ export interface RequestOptions {
   user?: string;
   password?: string;
   field?: Object;
-  progress?: boolean;
   attach?: Array<Attachment>;
   agent?: AgentOptions;
   withCredentials?: boolean;

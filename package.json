@@ -1,7 +1,7 @@
 {
-  "name": "most-popsicle",
+  "name": "most-request",
   "version": "1.0.0",
-  "description": "Most.js wrapper for Popsicle HTTP library",
+  "description": "Most.js wrapper for superagent library",
   "main": "lib/index.js",
   "module": "lib.es2015/index.js",
   "jsnext:main": "lib.es2015/index.js",

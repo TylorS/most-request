@@ -1,7 +1,7 @@
 import { Disposable, Scheduler, Sink, Source, Stream } from 'most';
 import { RequestOptions, Response } from './types';
 
-import { MulticastSource } from '@most/multicast';
+import { HoldSubjectSource } from 'most-subject';
 import { Request } from 'superagent';
 import { optionsToSuperagent } from './optionsToSuperagent';
 
@@ -13,7 +13,7 @@ export class ResponseStream extends Stream<Response> {
   private _options: RequestOptions;
 
   constructor (options: RequestOptions) {
-    super(new MulticastSource(new RequestSource(options)));
+    super(new HoldSubjectSource(new RequestSource(options), 1));
     this._options = options;
   }
 

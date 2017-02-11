@@ -62,6 +62,7 @@
   "dependencies": {
     "@most/multicast": "^1.2.5",
     "most": "^1.2.1",
+    "most-subject": "^5.3.0",
     "superagent": "^3.4.1"
   }
 }

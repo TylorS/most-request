@@ -1,6 +1,6 @@
 {
   "name": "most-popsicle",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Most.js wrapper for Popsicle HTTP library",
   "main": "lib/index.js",
   "module": "lib.es2015/index.js",
